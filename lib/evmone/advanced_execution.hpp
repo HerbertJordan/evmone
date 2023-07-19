@@ -17,5 +17,6 @@ EVMC_EXPORT evmc_result execute(
 
 /// EVMC-compatible execute() function.
 evmc_result execute(evmc_vm* vm, const evmc_host_interface* host, evmc_host_context* ctx,
-    evmc_revision rev, const evmc_message* msg, const uint8_t* code, size_t code_size) noexcept;
+    evmc_revision rev, const evmc_message* msg, const evmc_bytes32* code_hash,
+    const uint8_t* code, size_t code_size) noexcept;
 }  // namespace evmone::advanced
